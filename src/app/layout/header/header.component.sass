@@ -1,0 +1,45 @@
+@import '../../../assets/sass/utilities'
+
+#header
+    +rem(height, 206px)
+    padding: 2rem 0
+    +media-breakpoint-down(sm)
+        +rem(font-size, 180px)
+#logo
+    text-decoration: none !important
+    h1
+        color: $red
+        font-family: $family-heading
+        +rem(font-size, 62px)
+        font-weight: $weight-bold
+        +rem(letter-spacing, 4px)
+        margin: 0 0 1rem
+        +rem(text-shadow, 6px 6px $purple)
+        transition: all .1s ease-in-out
+        +media-breakpoint-down(sm)
+            +rem(font-size, 42px)
+    &:active
+        h1
+            text-shadow: none
+            transform: translate3d(6px, 6px, 0)
+.nav
+    .nav-item
+        .nav-link
+            color: $yellow
+            font-family: $family-heading
+            +rem(font-size, 28px)
+            font-weight: $weight-bold
+            +rem(letter-spacing, 4px)
+            +rem(text-shadow, 3px 3px $purple)
+            transition: all .1s ease-in-out
+            +media-breakpoint-down(sm)
+                +rem(font-size, 22px)
+                padding-left: 0
+                padding-right: 0
+            &.active,
+            &:active,
+            &:hover
+                color: $red
+            &:active
+                text-shadow: none
+                transform: translate3d(3px, 3px, 0)

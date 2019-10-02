@@ -1,0 +1,47 @@
+@import '../../assets/sass/utilities'
+
+a
+    text-decoration: none !important
+.work-item
+    .thumbnail
+        background-color: $red
+        border: 5px solid $black
+        border-bottom: none
+        position: relative
+        &:before
+            content: ''
+            display: block
+            padding-top: 56.25%
+            width: 100%
+        .thumbnail-media
+            background-size: cover
+            bottom: 0
+            filter: blur(2px)
+            left: 0
+            position: absolute
+            right: 0
+            top: 0
+            transition: filter .25s ease-in-out
+            transition-delay: .5s
+            &.ng-lazyloaded
+                filter: blur(0)
+    .description
+        background-color: $black
+        border: 5px solid $black
+        padding: 1rem
+        .title
+            color: $red
+            font-family: $family-heading
+            +rem(font-size, 32px)
+            +rem(letter-spacing, 4px)
+            overflow: hidden
+            text-align: center
+            text-overflow: ellipsis
+            white-space: nowrap
+            +media-breakpoint-down(sm)
+                +rem(font-size, 22px)
+    &:hover
+        .description
+            background-color: $red
+            .title
+                color: $black

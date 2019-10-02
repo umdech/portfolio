@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>{{work.title}}</h1>
+    <ng-container *ngIf="work.technologies">
+        <ul class="tech-list">
+            <li *ngFor="let tech of work.technologies"><i [ngClass]="'fab fa-' + tech"></i> {{tech}}</li>
+        </ul>
+    </ng-container>
+</div>
+<!-- /.container -->
+
+<ng-container *ngIf="work.full_image">
+    <div class="container-fluid px-0">
+        <section class="cover">
+            <div class="container">
+                <div class="computer-container">
+                    <img src="assets/images/imac.png" alt="imac" class="img-fluid imac">
+                    <div class="screen">
+                        <img [defaultImage]="work.lazy_image" [lazyLoad]="work.full_image" [alt]="work.title">
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.cover -->
+    </div>
+    <!-- /.container-fluid px-0 -->
+</ng-container>
+
+<div class="container">
+    <p><span class="highlight">year: </span>{{work.year}}</p>
+    <div class="text-right small-text">Icons made by <a href="https://www.flaticon.com/authors/freepik"
+            title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div>
+</div>
+<!-- /.container -->

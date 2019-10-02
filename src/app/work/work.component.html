@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let work of works">
+            <a [routerLink]="['/work', work.id]" [title]="work.title">
+                <div class="work-item">
+                    <div class="thumbnail">
+                        <div class="thumbnail-media" [defaultImage]="work.default_image" [lazyLoad]="work.thumb_image"></div>
+                    </div>
+                    <div class="description">
+                        <div class="title">{{work.title}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
